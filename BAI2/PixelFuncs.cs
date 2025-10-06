@@ -10,38 +10,39 @@
         public static uint FilterRood(uint pixel)
         {
             // *** IMPLEMENTATION HERE *** //
-            return 0;
+
+            return pixel & 0xFF00FFFF;
         }
 
         public static uint FilterGroen(uint pixel)
         {
             // *** IMPLEMENTATION HERE *** //
-            return 0;
+            return pixel & 0xFFFF00FF;
         }
 
         public static uint FilterBlauw(uint pixel)
         {
             // *** IMPLEMENTATION HERE *** //
-            return 0;
+            return pixel & 0xFFFFFF00;
         }
 
 
         public static byte RoodWaarde(uint pixelvalue)
         {
             // *** IMPLEMENTATION HERE *** //
-            return 0;
+            return (byte)((pixelvalue >> 16) & 0xFF);
         }
 
         public static byte GroenWaarde(uint pixelvalue)
         {
             // *** IMPLEMENTATION HERE *** //
-            return 0;
+            return (byte)((pixelvalue >> 8) & 0xFF);
         }
 
         public static byte BlauwWaarde(uint pixelvalue)
         {
             // *** IMPLEMENTATION HERE *** //
-            return 0;
+            return (byte)(pixelvalue & 0xFF);
         }
 
         public static uint Steganografie(uint pixelvalue)
